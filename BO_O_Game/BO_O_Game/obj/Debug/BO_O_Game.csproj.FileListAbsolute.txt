@@ -1,0 +1,5 @@
+C:\Users\daoud\source\repos\BO_O_Game\BO_O_Game\bin\Debug\BO_O_Game.dll
+C:\Users\daoud\source\repos\BO_O_Game\BO_O_Game\bin\Debug\BO_O_Game.pdb
+C:\Users\daoud\source\repos\BO_O_Game\BO_O_Game\obj\Debug\BO_O_Game.csproj.CoreCompileInputs.cache
+C:\Users\daoud\source\repos\BO_O_Game\BO_O_Game\obj\Debug\BO_O_Game.dll
+C:\Users\daoud\source\repos\BO_O_Game\BO_O_Game\obj\Debug\BO_O_Game.pdb
