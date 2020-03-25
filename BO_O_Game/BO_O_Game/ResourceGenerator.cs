@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace BO_O_Game
 {
-    public class ResourceGenerator : Building
+    public abstract class ResourceGenerator : Building
     {
         public override int? CellNB()
         {
             throw new NotImplementedException();
         }
 
-        public List<Resource> ResourceBySecond()
+        public virtual List<Resource> ResourceBySecond()
         {
             return null;
         }
+
+        
     }
 }
