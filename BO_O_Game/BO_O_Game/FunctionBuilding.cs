@@ -1,20 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BO_O_Game
 {
-    class FunctionBuilding : Building
+    [NotMapped]
+    public abstract class FunctionBuilding : Building
     {
-        public List<Action> Actions() {
-            return null;
+        #region Private class variable
+        private List<Action> actions;
+        #endregion
+
+        #region Properties
+        
+        public virtual List<Action> Actions
+        {
+            get { return actions; }
+            set { actions = value; }
         }
 
-        public override int? CellNB()
+        #endregion
+
+        #region Constructors
+        public FunctionBuilding()
         {
-            throw new NotImplementedException();
+            this.actions = new List<Action>();
         }
+        #endregion
     }
 }

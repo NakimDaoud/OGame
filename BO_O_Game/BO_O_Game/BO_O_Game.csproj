@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Annotations\EnumNamingAttribute.cs" />
     <Compile Include="Building.cs" />
+    <Compile Include="Extensions\EnumNamingExtension.cs" />
+    <Compile Include="ResourceNames.cs" />
     <Compile Include="FunctionBuilding.cs" />
     <Compile Include="IDbEntity.cs" />
     <Compile Include="OxygenGenerator.cs" />
@@ -54,6 +57,10 @@
     <Compile Include="SolarSystem.cs" />
     <Compile Include="SteelGenerator.cs" />
     <Compile Include="UraniumGenerator.cs" />
+    <Compile Include="Utils\MathUtil.cs" />
+    <Compile Include="Validators\DatetimeMoreThanNow.cs" />
+    <Compile Include="Validators\IntValidator.cs" />
+    <Compile Include="Validators\PlanetResourcesValidator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

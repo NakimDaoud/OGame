@@ -9,9 +9,36 @@ namespace BO_O_Game
 {
    public class SolarSystem : IDbEntity
     {
-        [StringLength(20, MinimumLength = 5)]
-        public string Name { get; set; }
+		#region Private class variable
+		private long? id;
+		private String name;
+		private List<Planet> planets;
+		#endregion
 
-        public virtual List<Planet> Planets { get; set; }
-    }
+		#region Properties
+		[StringLength(20, MinimumLength = 5)]
+		public String Name
+		{
+			get { return name; }
+			set { name = value; }
+		}
+
+		public virtual List<Planet> Planets
+		{
+			get { return planets; }
+			set { planets = value; }
+		}
+		#endregion
+
+		#region Implemented properties
+		public virtual long? Id { get => this.id; set => this.id = value; }
+		#endregion
+
+		#region Constructors
+		public SolarSystem()
+		{
+			this.planets = new List<Planet>();
+		}
+		#endregion
+	}
 }

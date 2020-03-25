@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +9,24 @@ namespace BO_O_Game
 {
     public abstract class ResourceGenerator : Building
     {
-        public override int? CellNB()
-        {
-            throw new NotImplementedException();
-        }
+        #region Private class variable
+        private List<Resource> resourceBySecond;
+        #endregion
 
-        public virtual List<Resource> ResourceBySecond()
+        #region Properties
+        [NotMapped]
+        public virtual List<Resource> ResourceBySecond
         {
-            return null;
+            get { return resourceBySecond; }
         }
+        #endregion
 
-        
+        #region Constructors
+        public ResourceGenerator()
+        {
+            this.resourceBySecond = new List<Resource>();
+        }
+        #endregion
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASPNetOgameLikeTPClassLibrary.Validators;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,27 +11,54 @@ namespace BO_O_Game
 {
     public class Planet : IDbEntity
     {
+        #region Private class variable
+        private long? id;
+        private String name;
+        private int? caseNb;
+        private List<Resource> resources;
+        private List<Building> buildings;
+        #endregion
+
+        #region Properties
         [StringLength(20, MinimumLength = 5)]
-        public string Name { get; set; }
-
-        [Range(0, Int32.MaxValue)]
-        public int? CaseDB { get; set; }
-
-        [MustHaveOneElementAttribute(ErrorMessage = "Vous avez déjà assez de ressource")]
-        public virtual List<Resource> Resources { get; set; }
-
-    }
-
-    public class MustHaveOneElementAttribute : ValidationAttribute
-    {
-        public override bool IsValid(object value)
+        public String Name
         {
-            var list = value as IList;
-            if (list.Count <= 4)
-            {
-                return true;
-            }
-            return false;
+            get { return name; }
+            set { name = value; }
         }
+
+        [IntValidator(0, int.MaxValue)]
+        public int? CaseNb
+        {
+            get { return caseNb; }
+            set { caseNb = value; }
+        }
+
+        [PlanetResourcesValidator]
+        public virtual List<Resource> Resources
+        {
+            get { return resources; }
+            set { resources = value; }
+        }
+
+        public virtual List<Building> Buildings
+        {
+            get { return buildings; }
+            set { buildings = value; }
+        }
+
+        #endregion
+
+        #region Implemented properties
+        public virtual long? Id { get => this.id; set => this.id = value; }
+        #endregion
+
+        #region Constructors
+        public Planet()
+        {
+            this.buildings = new List<Building>();
+            this.resources = new List<Resource>();
+        }
+        #endregion
     }
 }

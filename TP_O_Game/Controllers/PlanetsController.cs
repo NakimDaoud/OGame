@@ -1,5 +1,4 @@
-﻿using BO_O_Game;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -7,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using BO_O_Game;
 using TP_O_Game.Data;
 
 namespace TP_O_Game.Controllers
@@ -47,7 +47,7 @@ namespace TP_O_Game.Controllers
         // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,CaseDB")] Planet planet)
+        public ActionResult Create([Bind(Include = "Id,Name,CaseNb")] Planet planet)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace TP_O_Game.Controllers
         // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,CaseDB")] Planet planet)
+        public ActionResult Edit([Bind(Include = "Id,Name,CaseNb")] Planet planet)
         {
             if (ModelState.IsValid)
             {

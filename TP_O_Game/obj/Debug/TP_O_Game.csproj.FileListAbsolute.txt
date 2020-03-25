@@ -90,3 +90,5 @@ C:\Users\daoud\source\repos\TP_O_Game\TP_O_Game\bin\EntityFramework.dll
 C:\Users\daoud\source\repos\TP_O_Game\TP_O_Game\bin\EntityFramework.SqlServer.dll
 C:\Users\daoud\source\repos\TP_O_Game\TP_O_Game\bin\EntityFramework.xml
 C:\Users\daoud\source\repos\TP_O_Game\TP_O_Game\bin\EntityFramework.SqlServer.xml
+C:\Users\daoud\source\repos\TP_O_Game\TP_O_Game\obj\Debug\TP_O_Game.Migrations.first.resources
+C:\Users\daoud\source\repos\TP_O_Game\TP_O_Game\obj\Debug\TP_O_Game.csproj.GenerateResource.cache
